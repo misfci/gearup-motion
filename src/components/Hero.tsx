@@ -28,11 +28,11 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Parallax Effect */}
+      {/* Background with Logo */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${heroImage})`,
+          backgroundImage: `url(/lovable-uploads/c27e47a9-dd83-46e6-824c-fe4ee17ad4b8.png)`,
           transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px) scale(1.1)`
         }}
       />
@@ -48,14 +48,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-5xl mx-auto">
-          {/* Company Logo */}
-          <div className="mb-8 fade-in-up">
-            <img 
-              src={logo} 
-              alt="Gear Up Marketing Solutions" 
-              className="w-20 h-20 mx-auto object-contain drop-shadow-glow pulse-glow"
-            />
-          </div>
 
           {/* Animated Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-8 rise-up" style={{ animationDelay: '0.1s' }}>
