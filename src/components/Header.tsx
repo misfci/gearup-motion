@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowUp, Menu, X } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,10 +44,12 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2 fade-in-up">
-            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center shadow-glow">
-              <ArrowUp className="w-5 h-5 text-primary-foreground" />
-            </div>
+          <div className="flex items-center space-x-3 fade-in-up">
+            <img 
+              src={logo} 
+              alt="Gear Up Marketing Solutions" 
+              className="w-10 h-10 object-contain transition-all duration-300 hover:scale-110 hover:drop-shadow-glow"
+            />
             <span className="text-xl font-bold text-gradient">
               Gear Up Marketing Solutions
             </span>
@@ -58,11 +61,11 @@ const Header = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-foreground hover:text-primary transition-all duration-300 relative group fade-in-up`}
+                className={`text-foreground hover:text-primary transition-all duration-500 relative group fade-in-up transform hover:scale-105 hover:shadow-glow`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/60 transition-all duration-500 group-hover:w-full shadow-glow"></span>
               </button>
             ))}
           </nav>

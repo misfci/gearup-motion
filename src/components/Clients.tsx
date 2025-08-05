@@ -203,20 +203,6 @@ const Clients = () => {
             ))}
           </div>
 
-          {/* Stats Section */}
-          <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 ${isVisible ? 'scroll-fade in-view' : 'scroll-fade'}`} style={{ animationDelay: '0.6s' }}>
-            {[
-              { number: '500+', label: 'Happy Clients' },
-              { number: '2M+', label: 'Content Pieces' },
-              { number: '150%', label: 'Avg. Growth' },
-              { number: '98%', label: 'Retention Rate' }
-            ].map((stat, index) => (
-              <div key={stat.label} className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{stat.number}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

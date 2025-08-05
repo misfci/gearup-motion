@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight, TrendingUp, Zap } from 'lucide-react';
 import heroImage from '@/assets/hero-bg.jpg';
+import logo from '@/assets/logo.png';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -47,8 +48,17 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-5xl mx-auto">
+          {/* Company Logo */}
+          <div className="mb-8 fade-in-up">
+            <img 
+              src={logo} 
+              alt="Gear Up Marketing Solutions" 
+              className="w-20 h-20 mx-auto object-contain drop-shadow-glow pulse-glow"
+            />
+          </div>
+
           {/* Animated Tag */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-8 rise-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-8 rise-up" style={{ animationDelay: '0.1s' }}>
             <Zap className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Elevating Brands Since 2020</span>
             <TrendingUp className="w-4 h-4 text-primary" />
@@ -90,20 +100,6 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 fade-in-up" style={{ animationDelay: '0.8s' }}>
-            {[
-              { number: '500+', label: 'Brands Elevated' },
-              { number: '2M+', label: 'Content Pieces' },
-              { number: '150%', label: 'Avg. Growth' },
-              { number: '98%', label: 'Client Retention' }
-            ].map((stat, index) => (
-              <div key={stat.label} className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{stat.number}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 

@@ -11,7 +11,8 @@ import {
   ArrowUpRight, 
   Send,
   Zap,
-  CheckCircle
+  CheckCircle,
+  MessageCircle
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -260,15 +261,20 @@ const Contact = () => {
                 </div>
               </Card>
 
-              {/* Call to Action */}
+              {/* WhatsApp Contact */}
               <Card className={`p-6 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 ${isVisible ? 'scroll-fade in-view' : 'scroll-fade'}`} style={{ animationDelay: '1s' }}>
-                <h3 className="text-xl font-bold mb-3 text-gradient">Ready to Get Started?</h3>
+                <h3 className="text-xl font-bold mb-3 text-gradient">Prefer to Contact Us on WhatsApp?</h3>
                 <p className="text-muted-foreground mb-4">
-                  Schedule a free 30-minute consultation to discuss your project and discover 
-                  how we can help elevate your brand's voice.
+                  Let's connect directly via WhatsApp to discuss your brand's growth.
                 </p>
-                <Button variant="premium" size="lg" className="w-full arrow-up">
-                  Schedule Free Consultation
+                <Button 
+                  variant="premium" 
+                  size="lg" 
+                  className="w-full arrow-up group"
+                  onClick={() => window.open('https://wa.me/201008165790', '_blank')}
+                >
+                  <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
+                  Chat with Us on WhatsApp
                   <ArrowUpRight className="w-5 h-5" />
                 </Button>
               </Card>
