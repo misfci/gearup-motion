@@ -28,11 +28,11 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with Logo */}
+      {/* Background Image with Parallax Effect */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(/lovable-uploads/c27e47a9-dd83-46e6-824c-fe4ee17ad4b8.png)`,
+          backgroundImage: `url(${heroImage})`,
           transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px) scale(1.1)`
         }}
       />

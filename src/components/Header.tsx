@@ -46,7 +46,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 fade-in-up">
             <img 
-              src={logo} 
+              src="/lovable-uploads/c27e47a9-dd83-46e6-824c-fe4ee17ad4b8.png" 
               alt="Gear Up Marketing Solutions" 
               className="w-10 h-10 object-contain transition-all duration-300 hover:scale-110 hover:drop-shadow-glow"
             />
