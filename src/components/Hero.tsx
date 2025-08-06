@@ -28,10 +28,14 @@ const Hero = () => {
           <Zap className="w-5 h-5 text-lime-400 opacity-50" />
         </div>
         
-        {/* Center left logo placeholder */}
+        {/* Center logo */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-32">
-          <div className="w-20 h-20 bg-lime-400 rounded-lg flex items-center justify-center">
-            <div className="w-8 h-8 bg-black rounded-sm"></div>
+          <div className="w-20 h-20 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/729dd7d0-06ca-47fd-9cef-4417957412c7.png" 
+              alt="Gear Up Marketing Solutions Logo" 
+              className="w-16 h-16 object-contain"
+            />
           </div>
         </div>
         
