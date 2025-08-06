@@ -262,21 +262,24 @@ const Contact = () => {
               </Card>
 
               {/* WhatsApp Contact */}
-              <Card className={`p-6 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 ${isVisible ? 'scroll-fade in-view' : 'scroll-fade'}`} style={{ animationDelay: '1s' }}>
-                <h3 className="text-xl font-bold mb-3 text-gradient">Prefer to Contact Us on WhatsApp?</h3>
-                <p className="text-muted-foreground mb-4">
-                  Let's connect directly via WhatsApp to discuss your brand's growth.
-                </p>
-                <Button 
-                  variant="premium" 
-                  size="lg" 
-                  className="w-full arrow-up group"
-                  onClick={() => window.open('https://wa.me/201008165790', '_blank')}
-                >
-                  <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
-                  Chat with Us on WhatsApp
-                  <ArrowUpRight className="w-5 h-5" />
-                </Button>
+              <Card className={`p-8 bg-black border border-primary/20 ${isVisible ? 'scroll-fade in-view' : 'scroll-fade'}`} style={{ animationDelay: '1s' }}>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold mb-4 text-gradient">Prefer to Contact Us on WhatsApp?</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Let's connect directly via WhatsApp to discuss your brand's growth.
+                  </p>
+                  <div className="flex justify-center">
+                    <Button 
+                      variant="premium" 
+                      size="sm" 
+                      className="arrow-up group inline-flex items-center gap-2"
+                      onClick={() => window.open('https://wa.me/201008165790', '_blank')}
+                    >
+                      <MessageCircle className="w-4 h-4 transition-transform group-hover:scale-110" />
+                      Chat with Us on WhatsApp
+                    </Button>
+                  </div>
+                </div>
               </Card>
             </div>
           </div>
