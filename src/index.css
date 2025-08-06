@@ -181,7 +181,9 @@
   .pulse-glow {
     animation: pulseGlow 2s infinite;
   }
-
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
   /* Scroll-based animations */
   .scroll-fade {
     opacity: 0;
