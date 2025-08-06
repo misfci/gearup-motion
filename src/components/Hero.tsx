@@ -34,7 +34,7 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
         <div className={`transition-all duration-1000 ${isVisible ? 'rise-animation' : 'opacity-0'}`}>
           {/* Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mt-24 mb-8">
             <img 
               src="/lovable-uploads/a076f2e0-db85-4c93-b4d8-f479c4c3aaf3.png" 
               alt="Gear Up Marketing Solutions Logo" 
@@ -74,7 +74,7 @@ const HeroSection = () => {
               size="lg"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg transition-all duration-300"
               onClick={() => {
-                const element = document.getElementById('our-clients');
+                const element = document.getElementById('clients');
                 element?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
