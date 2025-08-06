@@ -10,9 +10,33 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/258460d7-cee5-43b2-a62d-10f8205f9c8e.png')`,
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+
+      {/* Navigation with Logo */}
+      <div className="absolute top-0 left-0 right-0 z-20 p-6">
+        <div className="container mx-auto">
+          <div className="flex justify-start">
+            <img 
+              src="/lovable-uploads/75ee6f9d-a26d-40bf-b147-f463f58e9b70.png" 
+              alt="Company Logo" 
+              className="h-8 w-auto object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Background Pattern/Floating Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-10">
         {/* Top left corner elements */}
         <div className="absolute top-16 left-16">
           <ArrowUpRight className="w-8 h-8 text-lime-400 opacity-60" />
@@ -26,17 +50,6 @@ const Hero = () => {
         {/* Bottom left corner elements */}
         <div className="absolute bottom-32 left-20">
           <Zap className="w-5 h-5 text-lime-400 opacity-50" />
-        </div>
-        
-        {/* Center logo */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-32">
-          <div className="w-20 h-20 flex items-center justify-center">
-            <img 
-              src="/lovable-uploads/729dd7d0-06ca-47fd-9cef-4417957412c7.png" 
-              alt="Gear Up Marketing Solutions Logo" 
-              className="w-16 h-16 object-contain"
-            />
-          </div>
         </div>
         
         {/* Additional floating elements */}
