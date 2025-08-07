@@ -35,7 +35,7 @@ const Footer = () => {
     ],
     resources: [
       { label: 'Case Studies', href: '#clients' },
-      { label: 'Testimonials', href: '#testimonials' },
+      { label: 'Privacy Policy', href: '#privacy' },
       { label: 'Blog', href: '#contact' },
       { label: 'Support', href: '#contact' },
     ],
@@ -177,7 +177,12 @@ const Footer = () => {
               <p className="text-muted-foreground text-sm">
                 © 2024 Gear Up Marketing Solutions. All rights reserved. 
                 <span className="mx-2">|</span>
-                <button className="hover:text-primary transition-colors duration-300">Privacy Policy</button>
+                <button 
+                  onClick={() => scrollToSection('#privacy')}
+                  className="hover:text-primary transition-colors duration-300"
+                >
+                  Privacy Policy
+                </button>
                 <span className="mx-2">|</span>
                 <button className="hover:text-primary transition-colors duration-300">Terms of Service</button>
               </p>
